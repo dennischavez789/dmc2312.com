@@ -1,4 +1,4 @@
-name: Test PowerShell on Ubuntu
+name: Test PowerShell with Pester
 on: push
 
 jobs:
@@ -10,8 +10,8 @@ jobs:
       uses: actions/checkout@v2
     - name: Perform a Pester test from the command-line
       shell: pwsh
-      run: Test-Path resultsfile.log | Should -Be $true
+      run: Get-help
     - name: Perform a Pester test from the Tests.ps1 file
       shell: pwsh
       run: |
-        Invoke-Pester .CA003.ps1 -Passthru
+        Invoke-Pester ./CA003.ps1 -Passthru
