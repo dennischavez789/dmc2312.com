@@ -14,8 +14,6 @@ jobs:
       - name: Azure PowerShell Action
         uses: Azure/powershell@v1
         with:
-          inlineScript: Get-AzVM -ResourceGroupName ${{ secrets.AZURE_RG }}
+          inlineScript: Get-AzVM -ResourceGroupName rg2
           azPSVersion: 3.1.0
-      - name: Run this now
-        run: ./CA003.ps1
-        shell: pwsh
+
