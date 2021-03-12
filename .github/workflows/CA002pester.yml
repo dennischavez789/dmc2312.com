@@ -14,4 +14,4 @@ jobs:
     - name: Perform a Pester test from the Tests.ps1 file
       shell: pwsh
       run: |
-        Start-Process ./CA003.ps1
+        Invoke-Pester ./CA003.ps1 -Passthru
