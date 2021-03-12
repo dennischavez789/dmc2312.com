@@ -14,10 +14,6 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
         enable-AzPSSession: false
 
-    - name: Run Az CLI script
-      run: |
-        az webapp list --query "[?state=='Running']"
-
     - name: Run Azure PowerShell script
       uses: azure/powershell@v1
       with:
