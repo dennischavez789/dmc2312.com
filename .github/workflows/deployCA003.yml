@@ -1,21 +1,26 @@
 on: [push]
 
-name: AzureLoginSample
+name: AzurePowerShellSample
 
 jobs:
+
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Log in with Azure
-        uses: azure/login@v1
-        with:
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'
-          enable-AzPSSession: true
-        
-      - name: Run Azure PowerShell script
-        uses: azure/powershell@v1
-        with:
-          inlineScript: |
-            ./CA003.ps1
-          azPSVersion: 3.1.0
 
+    - name: Login via Az module
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS}}
+        enable-AzPSSession: true
+
+    - name: Run Az CLI script
+      run: |
+        az webapp list --query "[?state=='Running']"
+
+    - name: Run Azure PowerShell script
+      uses: azure/powershell@v1
+      with:
+        azPSVersion: '3.1.0'
+        inlineScript: |
+          Get-AzVM -ResourceGroupName "RG1-prod"
