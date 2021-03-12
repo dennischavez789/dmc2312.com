@@ -1,23 +1,21 @@
 on: [push]
 
-name: AzurePowerShellSample
+name: AzureLoginSample
 
 jobs:
-
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    
-    - name: Login via Az module
-      uses: azure/login@v1.1
-      with:
-        creds: ${{secrets.AZURE_CREDENTIALS}}
-        enable-AzPSSession: true 
+      - name: Log in with Azure
+        uses: azure/login@v1
+        with:
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+          enable-AzPSSession: true
         
-    - name: Run Azure PowerShell script
-      uses: azure/powershell@v1
-      with:
-        inlineScript: |
-          ./CA003.ps1
-        azPSVersion: '3.1.0'
+      - name: Run Azure PowerShell script
+        uses: azure/powershell@v1
+        with:
+          inlineScript: |
+            ./CA003.ps1
+          azPSVersion: '3.1.0'
 
