@@ -12,8 +12,7 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{secrets.AZURE_CREDENTIALS}}
-        enable-AzPSSession: true
-        allow-no-subscriptions: true
+        enable-AzPSSession: false
 
     - name: Run Az CLI script
       run: |
