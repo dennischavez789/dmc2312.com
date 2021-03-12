@@ -16,5 +16,5 @@ jobs:
         with:
           inlineScript: Get-AzVM -ResourceGroupName ${{ secrets.AZURE_RG }}
           azPSVersion: 3.1.0
-      - name: Run this
+      - name: Run this now
         run: ./CA003.ps1
