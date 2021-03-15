@@ -14,18 +14,6 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
         enable-AzPSSession: true
 
-
-  install-dependencies:
-    name: Install dependencies
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Install from PSGallery
-      shell: pwsh
-      run: |
-        Set-PSRepository PSGallery -InstallationPolicy Trusted
-        Install-Module AzureAD
-        
     - name: Run Azure PowerShell script
       uses: azure/powershell@v1
       with:
