@@ -29,6 +29,6 @@ jobs:
     - name: Run Azure PowerShell script
       uses: azure/powershell@v1
       with:
-        azPSVersion: 4.7.0
+        azPSVersion: latest
         inlineScript: |
-          Get-AzureADMSConditionalAccessPolicy
+          Get-AzVM -ResourceGroupName "extends"
