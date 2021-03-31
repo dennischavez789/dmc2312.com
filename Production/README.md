@@ -1,1 +1,1 @@
-# Applies to the production resource subscription
+# Configuration to the production subscription
