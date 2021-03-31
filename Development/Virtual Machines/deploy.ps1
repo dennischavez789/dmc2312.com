@@ -1,4 +1,4 @@
-$rg = 'Development'
+$rg = 'adds'
 $deploymentName = 'dc'
 $parameterFile = 'C:\Users\dechavez\OneDrive - Microsoft\Desktop\Work\Git\dmc2312.com\Development\Virtual Machines\Parameters\parameters.json'
 New-AzResourceGroupDeployment `
