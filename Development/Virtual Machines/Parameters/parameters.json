@@ -3,10 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vmNames": {
-            "value": ["dmc","dmc2"]
-        },
-        "vmComputerNames": {
-          "value": {"dmc":"SZUE2ADDSPADC01","dmc2":"SZUE2ADDSPADC02"}
+            "value": ["dmc"]
         },
         "imageReference": {
             "value": {
@@ -31,7 +28,7 @@
         "adminPassword": {
             "reference": {
                 "keyVault": {
-                    "id": "/subscriptions/cec019ea-9cb0-4cef-aa65-73c8f54e8bbc/resourceGroups/Development/providers/Microsoft.KeyVault/vaults/kv1-dmc2312-dev"
+                    "id": "/subscriptions/991bc786-caad-479f-b48b-1b4bbbad027f/resourceGroups/adds/providers/Microsoft.KeyVault/vaults/kv-adds-dmc2312-dev"
                 },
                 "secretName": "secret1"
             }
