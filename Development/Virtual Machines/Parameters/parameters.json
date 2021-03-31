@@ -40,7 +40,7 @@
                     "ipConfigurations": [
                         {
                             "name": "ipconfig1",
-                            "subnetId": "/subscriptions/cec019ea-9cb0-4cef-aa65-73c8f54e8bbc/resourceGroups/Development/providers/Microsoft.Network/virtualNetworks/vnet-dev-eastus-001/subnets/snet-dev-eastus-001"
+                            "subnetId": "/subscriptions/991bc786-caad-479f-b48b-1b4bbbad027f/resourceGroups/adds/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1"
                         }
                     ]
                 }
