@@ -1,0 +1,86 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountName": {
+      "value": "szxxxxxxxpsta01"
+    },
+    "storageAccountKind": {
+      "value": "StorageV2"
+    },
+    "storageAccountSku": {
+      "value": "Standard_LRS"
+    },
+    "storageAccountAccessTier": {
+      "value": "Hot"
+    },
+    "blobContainers": {
+      "value": [
+        {
+          "name": "",
+          "publicAccess": "Container"
+        },
+        {
+          "name": "",
+          "publicAccess": "Container"
+        }
+      ]
+    },
+    "fileShares": {
+      "value": [
+        {
+          "name": "",
+          "shareQuota": "5120"
+        },
+        {
+          "name": "",
+          "shareQuota": "5120"
+        }
+      ]
+    },
+    "networkAcls": {
+      "value": {
+        "bypass": "AzureServices",
+        "virtualNetworkRules": [
+          {
+            "subnet": "GatewaySubnet",
+            "action": "Allow",
+            "state": "Succeeded"
+          },
+          {
+            "subnet": "checkpointbackend-10.208.0.64_27",
+            "action": "Allow",
+            "state": "Succeeded"
+          },
+          {
+            "subnet": "checkpointfrontend-10.208.0.32_27",
+            "action": "Allow",
+            "state": "Succeeded"
+          },
+          {
+            "subnet": "management-10.208.0.192_26",
+            "action": "Allow",
+            "state": "Succeeded"
+          },
+          {
+            "subnet": "directory-10.208.1.0_24",
+            "action": "Allow",
+            "state": "Succeeded"
+          },
+          {
+            "subnet": "backbone-10.208.2.0_24",
+            "action": "Allow",
+            "state": "Succeeded"
+          },
+          {
+            "subnet": "security-10.208.3.0_24",
+            "action": "Allow",
+            "state": "Succeeded"
+          }
+        ],
+        "ipRules": [],
+        "defaultAction": "Deny"
+      }
+    }
+  }
+}

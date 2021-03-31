@@ -1,0 +1,135 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "enterpriseScaleCompanyPrefix": {
+      "value": "Shaw"
+    },
+    "managementSubscriptionId": {
+      "value": "9ebac54b-6291-415a-9e5b-f3e5c661e571"
+    },
+    "connectivitySubscriptionId": {
+      "value": "a603981b-30a2-4f3c-b923-cc4328dc6dcd"
+    },
+    "identitySubscriptionId": {
+      "value": "d133a942-abe4-44f5-bfbc-96e75b5e43dc"
+    },
+    "denySubnetWithoutNsgForIdentity": {
+      "value": "Yes"
+    },
+    "denyRdpForIdentity": {
+      "value": "Yes"
+    },
+    "denyPipForIdentity": {
+      "value": "Yes"
+    },
+    "enableVmBackupForIdentity": {
+      "value": "Yes"
+    },
+    "enableLogAnalytics": {
+      "value": "Yes"
+    },
+    "retentionInDays": {
+      "value": "30"
+    },
+    "enableAsc": {
+      "value": "Yes"
+    },
+    "enableAksPolicy": {
+      "value": "Yes"
+    },
+    "enableAscForServers": {
+      "value": "Standard"
+    },
+    "enableAscForAppServices": {
+      "value": "Standard"
+    },
+    "enableAscForStorage": {
+      "value": "Standard"
+    },
+    "enableAscForSql": {
+      "value": "Standard"
+    },
+    "enableAscForKeyVault": {
+      "value": "Standard"
+    },
+    "enableAscForArm": {
+      "value": "Standard"
+    },
+    "enableAscForDns": {
+      "value": "Standard"
+    },
+    "enableAscForKubernetes": {
+      "value": "Standard"
+    },
+    "enableAscForRegistries": {
+      "value": "Standard"
+    },
+    "denyAksPrivileged": {
+      "value": "Yes"
+    },
+    "denyAksPrivilegedEscalation": {
+      "value": "Yes"
+    },
+    "denyHttpIngressForAks": {
+      "value": "Yes"
+    },
+    "enableArcMonitoring": {
+      "value": "Yes"
+    },
+    "enableVmMonitoring": {
+      "value": "Yes"
+    },
+    "enableVmssMonitoring": {
+      "value": "Yes"
+    },
+    "enableSecuritySolution": {
+      "value": "Yes"
+    },
+    "enableAgentHealth": {
+      "value": "Yes"
+    },
+    "enableChangeTracking": {
+      "value": "Yes"
+    },
+    "enableSqlAudit": {
+      "value": "Yes"
+    },
+    "enableSqlEncryption": {
+      "value": "Yes"
+    },
+    "enableVmBackup": {
+      "value": "Yes"
+    },
+    "denyRdp": {
+      "value": "Yes"
+    },
+    "enableStorageHttps": {
+      "value": "Yes"
+    },
+    "denyIpForwarding": {
+      "value": "Yes"
+    },
+    "denySubnetWithoutNsg": {
+      "value": "Yes"
+    },
+    "addressPrefix": {
+      "value": "172.19.1.0/24"
+    },
+    "enableVpnGw": {
+      "value": "Yes"
+    },
+    "enableErGw": {
+      "value": "Yes"
+    },
+    "location": {
+      "value": "eastus2"
+    },
+    "enableVwan": {
+      "value": "Yes"
+    },
+    "enableAzFw": {
+      "value": "Yes"
+    }
+  }
+}

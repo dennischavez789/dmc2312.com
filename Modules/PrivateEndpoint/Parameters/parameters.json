@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "pedetails": {
+      "value": [
+        {
+          "location": "westus2",
+          "privateEndpointName": "servicekeyv",
+          "privateLinkResource": "Resource ID",
+          "targetSubResource": [
+            "storageAccounts"
+          ],
+          "fqdn": "privatelink.vaultcore.azure.net",
+          "subnet": "Subnet Resource ID",
+          "virtualNetworkId": "VNet Resource ID"
+        }
+      ]
+    }
+  }
+}

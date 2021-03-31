@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "keyVaultName": {
+      "value": "sz-identity-p-akv-01"
+    },
+    "enableVaultForTemplateDeployment": {
+      "value": true
+    },
+    "vaultSku": {
+      "value": "Standard"
+    },
+    "workspaceId": {
+      "value": "d575b2a4-874d-4770-8d0a-9578ebedd203"
+    },
+    "tags": {
+      "value": {
+        "costcenter": "",
+        "Environment": "Prod",
+            "Product": "Identity"
+      }
+    
+      }
+    }
+  }

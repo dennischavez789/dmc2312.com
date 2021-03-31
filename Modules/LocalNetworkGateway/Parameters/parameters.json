@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "localNetworkGatewayName": {
+      "value": "m-fwp-1lgw-dc1"
+    },
+    "localAddressPrefixes": {
+      "value": [
+        "172.20.254.16/29"
+      ]
+    },
+    "localGatewayPublicIpAddress": {
+      "value": "12.183.26.217"
+    },
+    "localAsn": {
+      "value": "64512"
+    },
+    "localBgpPeeringAddress": {
+      "value": "172.20.254.17"
+    }
+  }
+}

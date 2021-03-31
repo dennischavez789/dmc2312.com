@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "peeringName": {
+      "value": "mdcn7vntrprtest-mdcn1vntsharedservices-01"
+    },
+    "localVnetName": {
+      "value": "m-dcn-7vnt-rprtest-01"
+    },
+    "remoteVirtualNetworkId": {
+      "value": "/subscriptions/33e82560-2637-46f6-b0a6-ef33fb8cc4aa/resourceGroups/m-dcn-1rsg-hubnetwork-01/providers/Microsoft.Network/virtualNetworks/m-dcn-1vnt-sharedservices-01"
+    },
+    "allowVirtualNetworkAccess": {
+      "value": true
+    },
+    "allowForwardedTraffic": {
+      "value": true
+    },
+    "allowGatewayTransit": {
+      "value": false
+    },
+    "useRemoteGateways": {
+      "value": false
+    }
+  }
+}

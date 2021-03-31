@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "logAnalyticsWorkspaceName": {
+      "type": "string",
+      "metadata": {
+        "description": "Required. Name of the Log Analytics workspace to connect with Azure Sentinel."
+      }
+    }
+  },
+  "variables": {
+  },
+  "resources": [
+    {
+      "name": "[concat('SecurityInsights','(', parameters('logAnalyticsWorkspaceName'),')')]",
+      "type": "Microsoft.OperationsManagement/solutions",
+      "apiVersion": "2015-11-01-preview",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('logAnalyticsWorkspaceName'))]"
+      },
+      "plan": {
+        "name": "[concat('SecurityInsights','(', parameters('logAnalyticsWorkspaceName'),')')]",
+        "product": "OMSGallery/SecurityInsights",
+        "publisher": "Microsoft",
+        "promotionCode": ""
+      }
+    }
+  ]
+}
